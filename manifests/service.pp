@@ -34,7 +34,7 @@ class docker::service (
   $storage_driver       = $docker::storage_driver,
   $tmp_dir              = $docker::tmp_dir,
 ){
-  $extra_parameters_array = any2array($extra_parameters)
+  $extra_parameters_array = $extra_parameters
 
   case $::osfamily {
     'Debian': {
